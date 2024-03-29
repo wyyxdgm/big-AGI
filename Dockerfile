@@ -13,7 +13,7 @@ COPY src/server/prisma ./src/server/prisma
 
 # Install dependencies, including dev (release builds should use npm ci)
 ENV NODE_ENV development
-RUN npm i g cnpm --registry https://registry.npmmirror.com/
+RUN npm i -g cnpm --registry https://registry.npmmirror.com/
 RUN cnpm i
 
 

@@ -14,12 +14,7 @@ in one of the following ways:
 [HTTP Basic Authentication](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication) is a simple method
 to secure your application.
 
-To enable it in `big-AGI`, you **must manually build the application**:
-
-- Build `big-AGI` with HTTP authentication enabled:
-  - Clone the repository
-  - Rename `middleware_BASIC_AUTH.ts` to `middleware.ts`
-  - Build: usual simple build procedure (e.g. [Deploy manually](../README.md#-deploy-manually) or [Deploying with Docker](deploy-docker.md))
+To enable it in `big-AGI`, you can add two more auth fields to the docker-compose.yml file
 
 - Configure the following [environment variables](environment-variables.md) before launching `big-AGI`:
 ```dotenv

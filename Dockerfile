@@ -1,5 +1,5 @@
 # Base
-FROM node:18-alpine AS base
+FROM node:21-alpine AS base
 ENV NEXT_TELEMETRY_DISABLED 1
 
 
@@ -14,7 +14,7 @@ COPY src/server/prisma ./src/server/prisma
 # Install dependencies, including dev (release builds should use npm ci)
 ENV NODE_ENV development
 RUN npm i g cnpm --registry https://registry.npmmirror.com/
-RUN cnpm ci
+RUN cnpm i
 
 
 # Builder
